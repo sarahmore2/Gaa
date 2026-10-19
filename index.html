@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Learn GAA - Rules, Health & Games</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Simple page header with title and short description -->
+  <header class="site-header">
+    <h1>Learn GAA</h1>
+    <p class="tagline">A colourful, beginner-friendly guide to Gaelic Athletic Association games</p>
+    <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <a href="#rules">Rules</a>
+      <a href="#health">Healthy Tips</a>
+      <a href="#stretches">Stretches</a>
+      <a href="#games">Games</a>
+      <a href="#quiz">Quick Quiz</a>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Hero section -->
+    <section class="hero" aria-hidden="false">
+      <div class="hero-content">
+        <h2>Why GAA matters</h2>
+        <p>GAA sports are for everyone — learn the rules, practice safe training, and have fun with interactive games.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1509228627155-1fb0f30a1d9d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="Kids playing Gaelic football" class="hero-image">
+    </section>
+
+    <!-- Rules section -->
+    <section id="rules" class="card">
+      <h3>Basic Rules (short)</h3>
+      <ul>
+        <li><strong>Teams:</strong> Usually 15 players on each team in Gaelic football and hurling.</li>
+        <li><strong>Scoring:</strong> Kick or strike the ball between goal posts — over the bar = 1 point, under the bar (into the net) = 3 points.</li>
+        <li><strong>Ball handling:</strong> You can carry, bounce, and kick or hand-pass the ball. There are limits (learn details below).</li>
+        <li><strong>Fair play:</strong> Respect opponents, follow the referee's calls, and play safely.</li>
+      </ul>
+      <p class="small">This is a simplified summary — encourage younger readers to ask coaches for full guidance.</p>
+    </section>
+
+    <!-- Health / diet suggestions -->
+    <section id="health" class="card">
+      <h3>Healthy Diet Suggestions</h3>
+      <p>Simple, balanced tips for players of all ages:</p>
+      <ul>
+        <li>Breakfast: Oats, fruit, and yoghurt for good slow energy.</li>
+        <li>Lunch: Lean protein (chicken, beans), whole grains and vegetables.</li>
+        <li>Snacks: Bananas, nuts, or a small sandwich before training.</li>
+        <li>Hydration: Drink water before, during, and after activity.</li>
+      </ul>
+    </section>
+
+    <!-- Stretches -->
+    <section id="stretches" class="card">
+      <h3>Warm-up & Stretches</h3>
+      <ol>
+        <li>Light jog for 5 minutes to raise heart rate.</li>
+        <li>Leg swings — 10 each side (dynamic stretch).</li>
+        <li>Hamstring stretch — hold 20 seconds each leg.</li>
+        <li>Hip circles and ankle rolls to loosen joints.</li>
+      </ol>
+      <p class="small">Always start gently and stop if something hurts. Coaches should supervise children.</p>
+    </section>
+
+    <!-- Interactive games -->
+    <section id="games" class="card">
+      <h3>Games — Place the Position</h3>
+      <p>Drag the labeled player tokens to the correct position on the mini-field. Press "Check Answers" when done.</p>
+
+      <div class="game-wrap">
+        <!-- Draggable tokens -->
+        <div class="tokens" aria-label="Player tokens">
+          <div class="token" draggable="true" data-pos="Goalkeeper" id="token-GK">Goalkeeper</div>
+          <div class="token" draggable="true" data-pos="Full Back" id="token-FB">Full Back</div>
+          <div class="token" draggable="true" data-pos="Midfielder" id="token-MF">Midfielder</div>
+          <div class="token" draggable="true" data-pos="Forward" id="token-FW">Forward</div>
+        </div>
+
+        <!-- Mini field with drop targets -->
+        <div class="field" aria-label="Mini field with positions">
+          <div class="drop-target" data-accept="Goalkeeper" id="drop-GK">Goalkeeper</div>
+          <div class="drop-target" data-accept="Full Back" id="drop-FB">Full Back</div>
+          <div class="drop-target" data-accept="Midfielder" id="drop-MF">Midfield</div>
+          <div class="drop-target" data-accept="Forward" id="drop-FW">Forward</div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <button id="checkPositions">Check Answers</button>
+        <button id="resetPositions">Reset Game</button>
+        <p id="positionResult" class="result" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Quick quiz section -->
+    <section id="quiz" class="card">
+      <h3>Quick Quiz</h3>
+      <p>Try a short quiz to test what you learned.</p>
+      <div id="quizContainer" class="quiz">
+        <div id="questionText" class="question">Question will appear here.</div>
+        <div id="choices" class="choices"></div>
+        <div class="quiz-controls">
+          <button id="submitAnswer">Submit Answer</button>
+          <button id="nextQuestion">Next</button>
+          <p id="quizFeedback" class="result" aria-live="polite"></p>
+        </div>
+        <p id="scoreDisplay" class="small">Score: 0 / 0</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Simple footer -->
+  <footer class="site-footer">
+    <p>Made with bright colours and a love for GAA. Suitable for ages 5–50+.</p>
+  </footer>
+
+  <!-- Link to external JavaScript (deferred to run after parsing) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
